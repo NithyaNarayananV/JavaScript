@@ -1,0 +1,9 @@
+showStars(10);
+
+function showStars(rows){
+    star='';
+    for(i=1;i<=rows;i++){
+        star+='*';
+        console.log(star);
+    }
+}
