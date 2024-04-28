@@ -1,0 +1,16 @@
+const marks =[100,20,40,60,80,100];
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks){
+    let count = 0;
+    let total = 0;
+    let average = 0;
+    for(i of marks){
+        average+=i;
+        count+=1;
+    }
+    average/=count;
+    let grade = (average<60)?'F':average<70?'D':average<80?'C':average<90?'B':'A';
+    return grade;
+}
