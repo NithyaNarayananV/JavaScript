@@ -1,0 +1,20 @@
+const movie = {
+    title : 'Valimai',
+    releaseYear : 2022,
+    rating : 4.5,
+    director : 'H Vinoth'
+};
+
+showProperties(movie);
+
+showProperties1(movie);
+
+function showProperties(obj){
+    console.log('title :',obj.title);
+    console.log('director :',obj.director);
+}
+function showProperties1(obj){
+    for ( let key in obj)
+        if (typeof obj[key]==='string')
+            console.log(key,obj[key]);
+}
