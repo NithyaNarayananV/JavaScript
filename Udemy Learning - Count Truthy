@@ -1,0 +1,25 @@
+//console.log(10);
+const array=[0,1,false,2,3,4,6,0,NaN,undefined];
+
+console.log(countTruthy(array));
+
+function countTruthy( array)
+{
+    falsyList=['Falsy',undefined,null,'',false,0,NaN];
+    let count = 0;
+    for(let i of array){
+        if(i)
+        count++;
+        //console.log(i);
+        /*
+        if(falsyList.includes(i))
+        {
+            console.log('False',i);
+            //continue;
+        }
+        else count++;
+        */
+    }
+    return count;
+}
+
