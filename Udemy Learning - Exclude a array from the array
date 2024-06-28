@@ -1,28 +1,15 @@
     const numbers = [1,2,-3,4,5,6,7,8];
     
-    const output = except(numbers,[3]);
+    const output = except(numbers,[1,-4]);
     
     
     console.log('Input : ' + numbers);
     console.log('Output: ' + output);
     
-    function except(array2, excluded){
-        const array = array2;
-
-        let temp = [];
-        let array1=[];
-        for (let i=0;i<=array.length ;i++){
-            for (let j =0;j<= excluded.length;j++){
-                if (excluded[j]==array[i])
-                {
-                    break;
-                }
-                else if (j==excluded.length)
-                {    array1.push(array[i]);
-                    console.log(i,j,array);                   
-                }
-                console.log(i,j,array1);
-            }
-        }
+    function except(array, excluded){
+        const array1=[];
+        for (let i of array)
+            if (!excluded.includes(i))
+                array1.push(i);
         return array1
     }
