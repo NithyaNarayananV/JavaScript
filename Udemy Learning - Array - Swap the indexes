@@ -1,0 +1,17 @@
+const numbers = [1,2,-3,4,5,6,7,8];
+
+console.log('Input : ' + numbers);
+const output = except(numbers,0,5);
+
+console.log('Output: ' + output);
+
+function except(array, index,newindex){
+    if (index == newindex)
+        return array
+    
+    let temp = array[newindex];
+    array[newindex]=array[index];
+    array[index]=temp;
+    return array;
+}
+
