@@ -1,7 +1,7 @@
 const numbers = [1,2,-3,4,5,6,7,8];
 
 console.log('Input : ' + numbers);
-const output = except(numbers,-0,0);
+const output = except(numbers,0,4);
 
 console.log('Output: ' + output);
 
@@ -10,10 +10,10 @@ function except(array, index,newindex){
         return 'Invalid'
     if (index == newindex)
         return array
-    
-    let temp = array[newindex];
-    array[newindex]=array[index];
-    array[index]=temp;
-    return array;
+    const output = [...array];
+    const element = output.splice(index, 1)[0];
+    output.splice(index + newindex,0,element);
+    return output;
+
 }
 
