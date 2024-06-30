@@ -1,11 +1,13 @@
 const numbers = [1,2,-3,4,5,6,7,8];
 
 console.log('Input : ' + numbers);
-const output = except(numbers,0,5);
+const output = except(numbers,-0,0);
 
 console.log('Output: ' + output);
 
 function except(array, index,newindex){
+    if(newindex>array.length || newindex<0 || index>array.length || array.length<0)
+        return 'Invalid'
     if (index == newindex)
         return array
     
