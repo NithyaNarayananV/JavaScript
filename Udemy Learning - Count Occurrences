@@ -1,0 +1,18 @@
+const numbers = [1,2,1,4,5,6,7,8];
+
+console.log('Input : ' + numbers);
+const Count = Occurrences(numbers,1);
+
+console.log('Output: ' + Count);
+
+function Occurrences(array, check){
+    let count =0;
+    for (i of array){
+        if (check == i)
+            count ++;
+    }
+    return count;
+
+
+}
+
