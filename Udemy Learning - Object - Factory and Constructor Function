@@ -1,0 +1,30 @@
+
+//Factory Function
+function createAddress (street,city,zipCode){
+    return {
+        street,
+        city,
+        zipCode
+    };
+}
+
+//Construtor FUnction
+function Address (street, city, zipCode){
+    this.street = street;        
+    this.city = city;
+    this.zipCode = zipCode;
+
+}
+
+
+let street = '2st Street';
+let city = 'Bengaluru';
+let zipCode = 500040;
+
+const address = new Address(street,city,zipCode)
+street = '1st Street';
+city = 'Chennai';
+zipCode = 600040;
+const address1 = new Address(street,city,zipCode)
+
+console.log(address,address1);
