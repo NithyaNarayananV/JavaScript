@@ -1,0 +1,36 @@
+//Construtor FUnction
+function Address (street, city, zipCode){
+    this.street = street;        
+    this.city = city;
+    this.zipCode = zipCode;
+
+}
+
+function areEqual(address,address1){
+    for(k in address){
+        if (address[k]!==address1[k])
+            return false;
+    }
+    return true;
+}
+
+function areSame(address,address1){
+    return address===address1;
+}
+
+let address = new Address('2st Street','Bengaluru',500040);
+let address1 = new Address('1st Street','Chennai',600040);
+console.log(address,address1);
+console.log('1 Equal : ',areEqual(address,address1));
+console.log('1 Same  : ',areSame(address,address1));
+
+
+address1 = new Address('2st Street','Bengaluru',500040);
+console.log(address,address1);
+console.log('2 Equal : ',areEqual(address,address1));
+console.log('2 Same  : ',areSame(address,address1));
+
+address1 = address;
+console.log(address,address1);
+console.log('2 Equal : ',areEqual(address,address1));
+console.log('2 Same  : ',areSame(address,address1));
