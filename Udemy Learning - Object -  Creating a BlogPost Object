@@ -1,0 +1,14 @@
+
+const blogPost ={
+    title : 'The Title',
+    body  : 'This is the Body of the Post',
+    author: 'Nithya Narayanan',
+    views : 10000,
+    comments: [
+        {author: 'Nishanth', body : 'Hey, its a nice one!'},
+        {author: 'Kaushik', body : 'Wow! thats cool!'},
+    ],
+    isLive : true
+}
+console.log(blogPost);
+
