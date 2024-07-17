@@ -1,0 +1,17 @@
+let sumOf=0
+function sum(...items){
+    for( i of items){
+        //console.log(i);
+        // x=i
+        // console.log(sumOf,' + ',i);
+        if (Array.isArray(i)){
+            //console.log(i);
+            sumOf=+sum(...i); 
+        }
+        else
+            sumOf +=i;
+    }
+    return sumOf;
+}
+
+console.log(sum(1,1,[2,3,1],1,1,[1,6],1));
